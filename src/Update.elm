@@ -9,3 +9,6 @@ update msg model =
     case msg of
         NoOp ->
             ( model, Cmd.none )
+
+        Msgs.OnFetchPlayers response ->
+            ( { model | players = response }, Cmd.none )
